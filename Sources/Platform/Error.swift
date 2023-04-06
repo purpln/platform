@@ -9,7 +9,7 @@ public enum PlatformError: Swift.Error, Equatable, CustomStringConvertible {
     case alreadyInUse    //EADDRINUSE
     case system(Int32)
     
-    init() {
+    public init() {
         switch errno {
         case EAGAIN: self = .again
         case EWOULDBLOCK: self = .wouldBlock
